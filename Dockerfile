@@ -1,7 +1,7 @@
 FROM golang:latest
 
 RUN apt-get update && \
-    apt-get install -y curl wget tar glibc-source gcc g++ make && \
+    apt-get install -y curl wget tar glibc-source gcc g++ make libc6 libc-bin && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
