@@ -7,3 +7,6 @@
     docker exec -it lamina1 /app/lamina1/check-bootstrap.sh
 ## Get Node Id
     docker exec -it lamina1 /app/lamina1/get_my_nodeid.sh
+
+## Docs
+    [read more...](https://docs.lamina1.network/docs/userguide/#running-a-lamina1-node)
