@@ -23,6 +23,5 @@ WORKDIR /app
 RUN wget -O lamina1.latest.ubuntu-latest.tar.gz https://lamina1.github.io/lamina1/lamina1.latest.ubuntu-latest.tar.gz && \
     tar xvf lamina1.latest.ubuntu-latest.tar.gz && \
     rm lamina1.latest.ubuntu-latest.tar.gz
-WORKDIR /lamina1
 
-CMD cat README.md && /app/lamina1/lamina1-node
+CMD cat /app/lamina1/README.md && /app/lamina1/lamina1-node
