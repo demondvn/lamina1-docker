@@ -1,7 +1,7 @@
-FROM debian:latest
+FROM ubuntu:latest
 
 RUN apt-get update && \
-    apt-get install -y curl wget tar && \
+    apt-get install -y curl wget tar libc6 libc-bin && \
     rm -rf /var/lib/apt/lists/*
 
 ENV GO_VERSION=1.19.6
@@ -24,4 +24,5 @@ RUN wget -O lamina1.latest.ubuntu-latest.tar.gz https://lamina1.github.io/lamina
     tar xvf lamina1.latest.ubuntu-latest.tar.gz && \
     rm lamina1.latest.ubuntu-latest.tar.gz
 RUN chmod +x /app/lamina1/lamina1-node
+EXPOSE 9651
 ENTRYPOINT /app/lamina1/lamina1-node
